@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+
+lmos_config @ git+https://github.com/LMOS-IO/LMOS-config
+lmos_database @ git+https://github.com/LMOS-IO/LMOS-database
