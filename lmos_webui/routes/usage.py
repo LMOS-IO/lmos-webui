@@ -16,14 +16,23 @@ router = APIRouter(tags=["usage"])
 
 @router.get("/usage/get/llm")
 async def get_usage_by_api_key(api_key: str):
+    """
+    this endpoint will return the usage for a given api key
+    """
     return await get_usage_by_api_key_action(api_key)
 
 
 @router.get("/usage/get/stt")
 async def get_usage_by_model_and_api_key(model: str, api_key: str):
+    """
+    this endpoint will return the usage for a given model and api key
+    """
     return await get_usage_by_model_and_api_key_action(model, api_key)
 
 
 @router.get("/usage/get/bulk")
 async def get_usage_by_model(model: str):
+    """
+    this endpoint will return the usage for a given model
+    """
     return await get_usage_by_model_action(model)

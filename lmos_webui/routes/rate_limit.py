@@ -10,4 +10,7 @@ router = APIRouter(tags=["Rate Limit"])
 
 @router.get("/ratelimit/get")
 async def get_current_limits(api_key: str, ip: str, model: str):
+    """
+    this endpoint will return the current rate limit for the given api key, ip, and model
+    """
     return await get_current_limits_action(api_key, ip, model)
